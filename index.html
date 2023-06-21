@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/20bc52809b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+    <title>daily-joke</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="main__header">Make your day laugh</h1>
+      <h3 id="remainTime"></h3>
+    </header>
+    <section class="main__container">
+      <img id="img" alt="img" />
+      <p id="the_joke"></p>
+      <form id="commentSubmit">
+        <div class="input__group">
+          <input
+            type="text"
+            placeholder="share your opinions..."
+            title="share your opinions"
+            id="input"
+            required
+          />
+          <button type="submit" title="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+    </section>
+    <section class="comment_container">
+      <p class="comment__header">Opinions...</p>
+      <hr />
+      <ul id="comment_lists"></ul>
+    </section>
+    <button id="open_btn">Read Me</button>
+    <dialog>
+      <i id="close_btn" class="fa-solid fa-xmark"></i>
+      <h2>About The Page</h2>
+      <span>## Description </span>
+      <p>
+        This is a web application that generates random jokes and allows users
+        to add comments. It utilizes the Joke API to fetch jokes and displays
+        them on the page. Users can also leave comments, which are stored
+        locally in the browser's storage.
+      </p>
+      <br />
+      <span>## Features </span>
+      <p>
+        - Fetches random jokes from the Joke API - Displays jokes and random
+        images on the page - Allows users to add comments - Comments are stored
+        in the browser's local storage (only read and write in user browser and
+        comments are not share with others.) - Provides a countdown timer for
+        the next joke update
+      </p>
+      <br />
+      <p style="color: red">Don't be aggressive about the JOKE!😡</p>
+      <p style="color: blue">Be Cool🥶</p>
+    </dialog>
+
+    <footer>
+      <p class="footer__1">
+        &copy; 2023 daily-joke@Kei-K. All rights reserved.
+      </p>
+      <p class="footer__2">
+        Create with &#128153; by
+        <a href="https://github.com/Kei-K23">Kei-K</a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
