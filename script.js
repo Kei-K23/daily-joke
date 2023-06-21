@@ -46,11 +46,11 @@ function displayComment() {
   const storageValue = localStorage.getItem("jokeComments");
   commentLists.innerHTML = null;
   const comments = storageValue ? JSON.parse(storageValue) : [];
-  for (let i = 1; i < comments.length; i++) {
+  for (let i = 0; i < comments.length; i++) {
     const li = document.createElement("li");
     li.id = i;
     li.classList.add("comment");
-    li.innerText = `(${i}) ${comments[i]}`;
+    li.innerText = `(${i + 1}) ${comments[i]}`;
     commentLists.append(li);
   }
 }
